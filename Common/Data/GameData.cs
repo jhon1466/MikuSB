@@ -29,6 +29,9 @@ public static class GameData
     public static Dictionary<int, SupportFixedExcel> SupportFixedData { get; private set; } = [];
     public static Dictionary<uint, WeaponSkinExcel> WeaponSkinData { get; private set; } = [];
     public static Dictionary<uint, DailyLevelExcel> DailyLevelData { get; private set; } = [];
+    public static Dictionary<uint, BossPvpBossChallengeExcel> BossPvpBossChallengeData { get; private set; } = [];
+    public static Dictionary<uint, BossPvpBossExcel> BossPvpBossData { get; private set; } = [];
+    public static Dictionary<uint, BossPvpNumExcel> BossPvpNumData { get; private set; } = [];
     public static Dictionary<uint, ProfileExcel> ProfileData { get; private set; } = [];
     public static Dictionary<uint, CardSkinPartsExcel> CardSkinPartsData { get; private set; } = [];
     public static Dictionary<uint, CallItemExcel> CallItemData { get; private set; } = [];

@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using MikuSB.GameServer.Game.BossPvp;
 using MikuSB.Proto;
 using MikuSB.GameServer.Server.CallGS.Handlers.Tower;
+using MikuSB.GameServer.Server.CallGS.Handlers.VirCapture;
 
 namespace MikuSB.GameServer.Server.CallGS.Handlers.Chapter;
 
@@ -68,6 +69,13 @@ public class Chapter_DealLevelSettlement : ICallGSHandler
         if (string.Equals(sCmd, "TowerEventChapter_LevelSettlement", StringComparison.Ordinal))
         {
             var (response, sync) = TowerEventChapter_LevelSettlement.HandleSettlement(connection.Player!, tbParam);
+            extraSync = sync;
+            return response;
+        }
+
+        if (string.Equals(sCmd, "VirCaptureTower_LevelSettlement", StringComparison.Ordinal))
+        {
+            var (response, sync) = VirCaptureTower_LevelSettlement.HandleSettlement(connection.Player!, tbParam);
             extraSync = sync;
             return response;
         }
